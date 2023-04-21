@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="lab_hamarin.MainPage">
+
+    <StackLayout Padding="25">
+        <Label Text="Первая дата" HorizontalTextAlignment="Center" TextColor="Black" FontSize="20"/>
+        <Frame BorderColor="Black" BackgroundColor="#FFF" CornerRadius="0" Margin="20" Padding="10">
+            <DatePicker x:Name="firstDate" Format="D" DateSelected="datePicker_DateFirstSelected">
+                <DatePicker.MinimumDate>6/01/2010</DatePicker.MinimumDate>
+                <DatePicker.MaximumDate>6/30/2021</DatePicker.MaximumDate>
+            </DatePicker>
+        </Frame>
+        <Label Text="Вторая дата" HorizontalTextAlignment="Center" TextColor="Black" FontSize="20"/>
+        <Frame BorderColor="Black" BackgroundColor="#FFF" CornerRadius="0" Margin="20" Padding="10">
+            <DatePicker x:Name="secondDate" Format="D" DateSelected="datePicker_DateSecondSelected">
+                <DatePicker.MinimumDate>6/01/2010</DatePicker.MinimumDate>
+                <DatePicker.MaximumDate>6/30/2021</DatePicker.MaximumDate>
+            </DatePicker>
+        </Frame>
+        <Label Text="Количество дней" HorizontalTextAlignment="Center" TextColor="Black" FontSize="20"/>
+        <Frame BorderColor="Black" BackgroundColor="#FFF" CornerRadius="0" Margin="20" Padding="10">
+            <Entry x:Name="countDays"/>
+        </Frame>
+        <Button x:Name="button" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Text="Разница дат" Clicked="Button_Click_Diff" />
+        <Button x:Name="buttonPlus" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Text="Прибавить дни" Clicked="Button_Click_Plus" />
+        <Button x:Name="buttonMinus" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Text="Вычесть дни" Clicked="Button_Click_Minus" />
+        <Label Padding="15" x:Name="result" Text="Результат" HorizontalTextAlignment="Center" TextColor="Black" FontSize="20"/>
+    </StackLayout>
+
+</ContentPage>
